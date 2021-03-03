@@ -38,7 +38,7 @@ namespace DN5CommandAPI
 
             services.AddControllers();
 
-            // services.AddScoped<ICommandAPIRepo, MockCommandAPIRepo>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<ICommandAPIRepo, SqlCommandAPIRepo>();
         }
