@@ -12,7 +12,7 @@ namespace DN5CommandAPI.Controllers
     [ApiController]
     public class CommandsController : ControllerBase
     {
-        //Random change
+        //Random changes
         private readonly ICommandAPIRepo _repository;
         private readonly IMapper _mapper;
 
