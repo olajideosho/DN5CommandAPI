@@ -3,6 +3,7 @@ using AutoMapper;
 using DN5CommandAPI.Data;
 using DN5CommandAPI.Dtos;
 using DN5CommandAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
@@ -29,6 +30,7 @@ namespace DN5CommandAPI.Controllers
             return Ok(_mapper.Map<IEnumerable<CommandReadDto>>(commandItems));
         }
 
+        [Authorize]
         [HttpGet("{id}", Name="GetCommandByID")]
         public ActionResult<CommandReadDto> GetCommandById(int id)
         {
